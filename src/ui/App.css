@@ -1,0 +1,179 @@
+/* HEADER/NAVBAR */
+header {
+  width: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: #152D35;
+  -webkit-app-region: drag;
+  position: sticky;
+  top: 0;
+  height: 3.1rem;
+  display: flex;
+  align-items: center;
+  /* Make the logo go to the left and buttons to the right */
+  justify-content: space-between; /* <--- UNCOMMENT OR ADD THIS LINE */
+}
+h3{
+  color: rgb(209, 208, 208);
+}
+
+/* Logo and Name */
+.logoName {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 300;
+  color: aliceblue;
+  -webkit-app-region: no-drag;
+}
+
+.logoName h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  padding-left: 0.2rem;
+}
+
+/* Control Buttons (Close/Minimize/Maximize) */
+.window-buttons {
+  display: flex;
+  gap: 0.5rem;
+  -webkit-app-region: no-drag;
+  /* REMOVE THIS LINE: The 'justify-content: space-between' in header handles positioning */
+  /* padding-left: 890px; */
+}
+
+header button {
+  all: unset;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+#close {
+  background-color: #FF605C;
+}
+
+#minimize {
+  background-color: #FFBD44;
+}
+
+#maximize {
+  background-color: #00CA4E;
+}
+
+/* MAIN LAYOUT */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%; /* Ensure main takes full width to center its content */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* MAIN BOX */
+.main-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* EACH SECTION (CPU/RAM/STORAGE) */
+.graph-box {
+  padding: 1rem;
+  background-color: #345B63;
+  border-radius: 0.5rem;
+  display: block;
+  padding: 0rem;
+  width: 100%;
+  
+}
+
+/* MAIN GRAPH */
+.mainGrid {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #152D35;
+  border-radius: 0.5rem;
+  height: 150px;
+  overflow: hidden;
+  /* Added to ensure children align properly if not already */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align content to the top */
+}
+
+/* HEADLINE */
+.text-mainGrid {
+  color:rgb(244, 243, 242);
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 300;
+ 
+  width: 100%; /* Ensure it spans full width to allow text centering if needed */
+  text-align: left; /* Keep text aligned to the left within its container */
+  margin-bottom: 10px; /* Add some space below the title */
+}
+
+.text-mainGrid h1 {
+    margin: 0; /* Remove default h1 margin */
+    padding-left: 1rem; /* Add some padding to align with other content */
+}
+
+/* SELECT OPTION BUTTON */
+.selectOption {
+  display: block;
+  padding: 1rem;
+  width: 98%;
+  background-color: #345B63;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none; /* Remove default button border */
+  
+}
+
+.selectOption:hover {
+  background-color: #152D35;
+}
+
+.selectOptionTitle {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  color: #f0f0f0;
+}
+
+.selectOptionTitle :first-child {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.selectOptionTitle :nth-child(2) {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.selectOptionChart {
+  height: 1.2rem;
+  width: 100%;
+  /* Ensure content is aligned within the chart area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.App {
+  position: relative;
+  z-index: 1;
+}
