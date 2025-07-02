@@ -1,6 +1,7 @@
 # 💻 Cross-Platform System Resource Monitor
 
 ## 📚 Table of Contents
+
 - [About the Project](#-about-the-project)
 - [Concept & Inspiration](#-concept--inspiration)
 - [Features](#-features)
@@ -13,7 +14,6 @@
 - [Project Structure](#-project-structure)
 - [Future Enhancements](#-future-enhancements)
 - [Contributors](#-contributors)
-- [License](#-license)
 - [Contact](#-contact)
 
 ---
@@ -68,8 +68,6 @@ Inspired by tools like **Windows Task Manager** and **macOS Activity Monitor**, 
 
 ## 🛠️ Getting Started
 
-To get a local copy up and running, follow these steps:
-
 ### 📋 Prerequisites
 
 - Node.js (LTS version recommended)  
@@ -89,32 +87,41 @@ cd Memory-manager
 
 # Install dependencies
 npm install
+# Or if you prefer Yarn:
+# yarn install
+
+---
 
 
-🚀 Running the Application (Development Mode)
+### 🚀 Running the Application (Development Mode)
 Start the Electron + React app in development mode:
-
+```bash
 npm run dev:electron
-This will launch the Electron application in development mode, typically with hot-reloading enabled for UI changes.
+# Or if you prefer Yarn:
+# yarn dev:electron
 
-📦 Building for Production
+---
+
+### 📦 Building for Production
 To create a distributable package for your operating system:
+
+```bash
 
 # For Windows (64-bit)
 npm run dist:win
-# (Run terminal as Administrator for installer creation)
+# (Run terminal as Administrator)
 
 # For macOS (ARM64)
 npm run dist:mac
 
 # For Linux (64-bit)
 npm run dist:linux
-Packaged applications will typically be found in a dist/ folder at your project root.
 
-## 📂 Project Structure
-graphql
-Copy
-Edit
+
+---
+
+
+### 📂 Project Structure
 Memory-manager/
 ├── public/                 # Static assets (e.g., index.html template, icon.png)
 ├── src/
@@ -135,26 +142,31 @@ Memory-manager/
 ├── tsconfig.json           # TypeScript configuration
 ├── vite.config.ts          # Vite build configuration
 └── README.md               # This file
- ##🚀 Future Enhancements
- Detailed Process List: Displaying a list of running processes and their resource consumption
+---
 
- Network Usage Monitoring: Graphs for upload/download speeds
+## 🚀 Future Enhancements
 
- System Notifications: Alerts for high resource usage thresholds
+- 🧾 **Detailed Process List** — Display a list of running processes and their resource consumption  
+- 🌐 **Network Usage Monitoring** — Upload/download usage graphs  
+- 🚨 **System Notifications** — Alert users on high resource consumption  
+- 🧩 **Customizable Dashboards** — Choose which stats to display  
+- 📊 **Historical Data Logging** — Track and store usage trends over time  
+- 🖱️ **Improved Chart Interactivity** — Zoom, tooltips, and advanced views  
+- 🪟 **System Tray Support** — Minimize to tray functionality  
 
- Customizable Dashboards: Allowing users to select which metrics to display
-
- Historical Data Logging: Storing usage data over time for trend analysis
-
- Improved Chart Interactivity: Zooming, tooltips with more data
-
- System Tray Support: Minimize to tray
+---
 
 ## 🤝 Contributors
-Nandani Kumari
+
+- [Nandani Kumari](https://github.com/Nandani1512)
+
+---
 
 ## 📧 Contact
+
 Feel free to connect with me:
 
-GitHub: https://github.com/Nandani1512
+- **GitHub**: [https://github.com/Nandani1512](https://github.com/Nandani1512)  
+
+
 
