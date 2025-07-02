@@ -101,7 +101,7 @@ npm run dev:electron
 # yarn dev:electron
 
 ---
-
+```
 ### 📦 Building for Production
 To create a distributable package for your operating system:
 
@@ -119,9 +119,10 @@ npm run dist:linux
 
 
 ---
-
+```
 
 ### 📂 Project Structure
+```
 Memory-manager/
 ├── public/                 # Static assets (e.g., index.html template, icon.png)
 ├── src/
@@ -143,7 +144,7 @@ Memory-manager/
 ├── vite.config.ts          # Vite build configuration
 └── README.md               # This file
 ---
-
+```
 ## 🚀 Future Enhancements
 
 - 🧾 **Detailed Process List** — Display a list of running processes and their resource consumption  
