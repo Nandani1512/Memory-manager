@@ -1,6 +1,6 @@
 # Cross-Platform System Resource Monitor
 
-![System Resource Monitor Screenshot Placeholder](https://placehold.co/800x450/17243E/00C4FF?text=Your+Project+Screenshot+Here)
+![System Resource Monitor Screenshot Placeholder](src/ui/assets/memory-manager_SS.png)
 *(Replace this with an actual screenshot or GIF of your running application)*
 
 ## Table of Contents
@@ -108,4 +108,3 @@ To create a distributable package for your operating system:
 
 Packaged applications will typically be found in a `dist` folder within your project root.
 
-## Project Structure
