@@ -2,7 +2,7 @@
 
 ByteLook is a lightweight, real-time system monitor for Windows. Built with modern web technologies, it allows you to track your computer's vital signs—CPU, RAM, Storage, Network, and Battery—in a beautiful, native-feeling desktop application.
 
-![ByteLook Preview](src/ui/assets/memory-manager_SS.png) 
+![ByteLook Preview](src/ui/assets/image.png) 
 *(Note: Add an actual screenshot to your assets folder and update this path if needed)*
 
 ## ✨ Features
