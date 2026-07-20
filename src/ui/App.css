@@ -1,0 +1,339 @@
+/* =============================================
+   HEADER / TITLE BAR
+   ============================================= */
+header {
+  width: 100%;
+  padding: 0 1rem;
+  background: rgba(15, 23, 41, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  -webkit-app-region: drag;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Logo and app name */
+.logoName {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  -webkit-app-region: no-drag;
+}
+
+.logoName img {
+  border-radius: 6px;
+}
+
+.logoName h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+/* Window control buttons */
+.window-buttons {
+  display: flex;
+  gap: 0.5rem;
+  -webkit-app-region: no-drag;
+}
+
+header button {
+  all: unset;
+  border-radius: 50%;
+  width: 0.85rem;
+  height: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+header button:hover {
+  transform: scale(1.2);
+}
+
+#minimize {
+  background-color: #FFBD44;
+}
+#minimize:hover {
+  box-shadow: 0 0 8px rgba(255, 189, 68, 0.6);
+}
+
+#maximize {
+  background-color: #00CA4E;
+}
+#maximize:hover {
+  box-shadow: 0 0 8px rgba(0, 202, 78, 0.6);
+}
+
+#close {
+  background-color: #FF605C;
+}
+#close:hover {
+  box-shadow: 0 0 8px rgba(255, 96, 92, 0.6);
+}
+
+/* =============================================
+   MAIN LAYOUT
+   ============================================= */
+.App {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+/* =============================================
+   STAT CARDS — Dynamic Grid
+   ============================================= */
+.statCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--text-muted);
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+
+.statCard:hover {
+  background: var(--bg-surface-hover);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Active card styles — overridden per view */
+.statCard--active {
+  border-color: rgba(93, 212, 238, 0.3);
+  box-shadow: 0 0 20px rgba(93, 212, 238, 0.08), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.statCard--active::before {
+  opacity: 1;
+}
+
+/* Per-view accent colors for active cards */
+.statCard--active:nth-child(1) {
+  border-color: rgba(93, 212, 238, 0.3);
+  box-shadow: 0 0 20px rgba(93, 212, 238, 0.08), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.statCard--active:nth-child(1)::before {
+  background: var(--accent-cpu);
+}
+
+.statCard--active:nth-child(2) {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.08), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.statCard--active:nth-child(2)::before {
+  background: var(--accent-ram);
+}
+
+.statCard--active:nth-child(3) {
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.08), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.statCard--active:nth-child(3)::before {
+  background: var(--accent-storage);
+}
+
+.statCard--active:nth-child(4) {
+  border-color: rgba(167, 139, 250, 0.3);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.08), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.statCard--active:nth-child(4)::before {
+  background: #A78BFA; /* Purple for Network */
+}
+
+.statCard--active:nth-child(5) {
+  border-color: rgba(244, 114, 182, 0.3);
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.08), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.statCard--active:nth-child(5)::before {
+  background: #F472B6; /* Pink for Battery */
+}
+
+.statCard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.statCard-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.statCard-subtitle {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  max-width: 60%;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statCard-chart {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============================================
+   LIVE MONITOR — main chart area
+   ============================================= */
+.liveMonitor {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.liveMonitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.liveMonitor-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.liveMonitor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #34D399;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+  }
+}
+
+.liveMonitor-metric {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.liveMonitor-body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.liveMonitor-percentage {
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.liveMonitor-percentValue {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.liveMonitor-percentSign {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-left: 2px;
+}
+
+.liveMonitor-chart {
+  flex: 1;
+  height: 120px;
+  min-width: 0;
+}
+
+/* =============================================
+   RESPONSIVE — stack cards vertically on small windows
+   ============================================= */
+@media (max-width: 640px) {
+  .statCards {
+    grid-template-columns: 1fr;
+  }
+
+  .liveMonitor-body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .liveMonitor-percentage {
+    justify-content: center;
+  }
+
+  .liveMonitor-chart {
+    height: 100px;
+  }
+}

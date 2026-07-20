@@ -1,0 +1,57 @@
+{
+  "name": "bytelook",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc -p src/electron/tsconfig.json",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "electron:start": "electron .",
+    "dist": "npm run build && electron-builder --win"
+  },
+  "main": "dist-electron/main.js",
+  "dependencies": {
+    "electron-store": "^8.2.0",
+    "os-utils": "^0.0.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.12.7",
+    "systeminformation": "^5.31.15"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/os-utils": "^0.0.4",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vitest": "^1.5.0"
+  },
+  "build": {
+    "appId": "com.bytelook.app",
+    "productName": "ByteLook",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist-electron/**/*",
+      "dist-react/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": true
+    }
+  }
+}

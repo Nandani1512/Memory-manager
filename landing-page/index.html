@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteLook — Real-Time System Monitor for Windows</title>
+  <meta name="description" content="ByteLook is a beautifully crafted, lightweight system monitor for Windows. Track CPU, RAM, Storage, Network, and Battery in real-time with stunning visualizations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__container">
+      <a href="#" class="navbar__logo">
+        <span class="navbar__logo-icon">⚡</span>
+        <span class="navbar__logo-text">ByteLook</span>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="#features" class="navbar__link">Features</a></li>
+        <li><a href="#metrics" class="navbar__link">Metrics</a></li>
+        <li><a href="#faq" class="navbar__link">FAQ</a></li>
+      </ul>
+      <a href="../release/ByteLook Setup 1.0.0.exe" download class="navbar__cta" id="nav-download-btn">Download</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-glow hero__bg-glow--1"></div>
+    <div class="hero__bg-glow hero__bg-glow--2"></div>
+    <div class="hero__bg-glow hero__bg-glow--3"></div>
+
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__badge" id="hero-badge">
+          <span class="hero__badge-dot"></span>
+          Open Source &middot; Free Forever
+        </div>
+        <h1 class="hero__title" id="hero-title">
+          Deep Insights.<br />
+          <span class="hero__title-gradient">Beautifully Presented.</span>
+        </h1>
+        <p class="hero__subtitle" id="hero-subtitle">
+          A lightweight, real-time system monitor for Windows. Track CPU, RAM, Storage, Network &amp; Battery — all in one stunning dashboard.
+        </p>
+        <div class="hero__actions">
+          <a href="../release/ByteLook Setup 1.0.0.exe" download class="hero__btn hero__btn--primary" id="hero-download-btn">
+            <svg class="hero__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download for Windows
+          </a>
+          <a href="https://github.com" class="hero__btn hero__btn--secondary" id="hero-github-btn" target="_blank" rel="noopener">
+            <svg class="hero__btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero__image-wrapper">
+        <div class="hero__image-glow"></div>
+        <img src="assets/app-screenshot.png" alt="ByteLook Dashboard Preview" class="hero__image" id="hero-image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features" id="features">
+    <div class="features__container">
+      <div class="section-header">
+        <h2 class="section-header__title">Why ByteLook?</h2>
+        <p class="section-header__subtitle">Everything you need to understand your system at a glance.</p>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card" id="feature-realtime">
+          <div class="feature-card__icon feature-card__icon--cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="feature-card__title">Real-Time Monitoring</h3>
+          <p class="feature-card__desc">Live charts updated every 500ms. Watch your system breathe in real-time with smooth, animated visualizations.</p>
+        </div>
+        <div class="feature-card" id="feature-lightweight">
+          <div class="feature-card__icon feature-card__icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="feature-card__title">Blazingly Fast</h3>
+          <p class="feature-card__desc">Built with Electron &amp; React for native performance. Minimal CPU footprint so it never slows you down.</p>
+        </div>
+        <div class="feature-card" id="feature-beautiful">
+          <div class="feature-card__icon feature-card__icon--purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="feature-card__title">Beautiful UI</h3>
+          <p class="feature-card__desc">A stunning glassmorphic dark theme with vibrant accent colors. System monitoring has never looked this good.</p>
+        </div>
+        <div class="feature-card" id="feature-alerts">
+          <div class="feature-card__icon feature-card__icon--amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="feature-card__title">Smart Alerts</h3>
+          <p class="feature-card__desc">Get native desktop notifications when CPU or RAM exceeds 90%. Stay ahead of performance bottlenecks.</p>
+        </div>
+        <div class="feature-card" id="feature-tray">
+          <div class="feature-card__icon feature-card__icon--pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="feature-card__title">System Tray</h3>
+          <p class="feature-card__desc">Runs silently in your system tray. Access your dashboard instantly without cluttering your taskbar.</p>
+        </div>
+        <div class="feature-card" id="feature-opensource">
+          <div class="feature-card__icon feature-card__icon--cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          </div>
+          <h3 class="feature-card__title">Open Source</h3>
+          <p class="feature-card__desc">100% free and open source. Inspect the code, contribute features, or fork it for your own needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== METRICS SHOWCASE ========== -->
+  <section class="metrics" id="metrics">
+    <div class="metrics__container">
+      <div class="section-header">
+        <h2 class="section-header__title">5 Metrics. One Dashboard.</h2>
+        <p class="section-header__subtitle">Track every critical resource on your machine in real-time.</p>
+      </div>
+      <div class="metrics__grid">
+        <div class="metric-pill" id="metric-cpu">
+          <div class="metric-pill__dot metric-pill__dot--cyan"></div>
+          <span class="metric-pill__label">CPU Usage</span>
+          <span class="metric-pill__value">Real-time processor load</span>
+        </div>
+        <div class="metric-pill" id="metric-ram">
+          <div class="metric-pill__dot metric-pill__dot--amber"></div>
+          <span class="metric-pill__label">RAM Usage</span>
+          <span class="metric-pill__value">Memory consumption tracking</span>
+        </div>
+        <div class="metric-pill" id="metric-storage">
+          <div class="metric-pill__dot metric-pill__dot--green"></div>
+          <span class="metric-pill__label">Storage</span>
+          <span class="metric-pill__value">Disk space monitoring</span>
+        </div>
+        <div class="metric-pill" id="metric-network">
+          <div class="metric-pill__dot metric-pill__dot--purple"></div>
+          <span class="metric-pill__label">Network Speed</span>
+          <span class="metric-pill__value">Upload &amp; download rates</span>
+        </div>
+        <div class="metric-pill" id="metric-battery">
+          <div class="metric-pill__dot metric-pill__dot--pink"></div>
+          <span class="metric-pill__label">Battery</span>
+          <span class="metric-pill__value">Charge level &amp; status</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DOWNLOAD CTA ========== -->
+  <section class="download" id="download">
+    <div class="download__container">
+      <div class="download__glow"></div>
+      <h2 class="download__title">Ready to monitor smarter?</h2>
+      <p class="download__subtitle">Download ByteLook for free. No sign-up, no telemetry, no strings attached.</p>
+      <a href="../release/ByteLook Setup 1.0.0.exe" download class="download__btn" id="download-btn">
+        <svg class="download__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download for Windows
+      </a>
+      <p class="download__note">Windows 10+ &middot; 45 MB &middot; v1.0.0</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo-icon">⚡</span>
+        <span class="footer__logo-text">ByteLook</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 ByteLook. Built with ❤️ using Electron &amp; React.</p>
+      <div class="footer__links">
+        <a href="https://github.com" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="#features" class="footer__link">Features</a>
+        <a href="#faq" class="footer__link">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification for download -->
+  <div class="toast" id="download-toast">
+    <div class="toast__icon">✅</div>
+    <div class="toast__content">
+      <strong>Download Started!</strong>
+      <p>ByteLook Setup 1.0.0.exe is downloading. Run the installer to get started.</p>
+    </div>
+    <button class="toast__close" id="toast-close">&times;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
